@@ -1,0 +1,217 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        overflow: hidden;
+    }
+    
+    .gameContainer {
+        background-image: url(assets/gautham.jpg);
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        width: 100%;
+        height: 100vh;
+    }
+    /* .batma {
+        background-image: url(assts/batman.gif);
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        position: absolute;
+        height: 180px;
+        bottom: 20px;
+        filter: contrast(1.9);
+    } */
+    
+    .play {
+        display: block;
+    }
+    
+    .play span {
+        position: absolute;
+        top: 35%;
+        left: 36%;
+        color: white;
+        text-shadow: 20px 15px 25px rgb(0, 0, 0);
+        font-size: 56px;
+        font-family: monospace;
+        font-weight: 800;
+        margin: 10px;
+    }
+    
+    .play button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50px);
+        height: 40px;
+        width: 80px;
+        color: white;
+        background-color: red;
+        border-style: groove;
+        border: 2;
+        border-radius: 20px;
+    }
+    
+    .play button:focus {
+        outline: none;
+        background-color: rgb(211, 50, 1);
+    }
+    
+    .batman {
+        visibility: hidden;
+    }
+    
+    .batman img {
+        position: absolute;
+        height: 150px;
+        bottom: 20px;
+        filter: contrast(1.9);
+    }
+    
+    .joker {
+        visibility: hidden;
+    }
+    
+    .joker img {
+        position: absolute;
+        height: 90px;
+        bottom: 28px;
+        left: 100vw;
+        filter: contrast(1.5);
+    }
+    
+    .GameOver {
+        visibility: hidden;
+        /* animation: up 5s linear 1s 1; */
+    }
+    /* @keyframes up {
+        0% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: visible;
+        }
+    } */
+    
+    .GameOver span {
+        position: absolute;
+        display: flex;
+        font-size: 50px;
+        font-weight: bolder;
+        font-family: monospace;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        top: 47%;
+        left: 46%;
+        transform: translateX(-120px);
+        text-shadow: 5px 4px 4px rgb(235, 36, 185);
+    }
+    
+    .GameOver img {
+        position: absolute;
+        height: 120px;
+        top: 27%;
+        left: 29%;
+        filter: contrast(1.5);
+        animation: superman 3s linear 1ms infinite;
+    }
+    
+    @keyframes superman {
+        0% {
+            left: 30%;
+        }
+        100% {
+            left: 53%;
+        }
+    }
+    
+    .score {
+        visibility: hidden;
+    }
+    
+    .score span {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        font-weight: bolder;
+        font-family: monospace;
+        color: white;
+        left: 5%;
+        top: 5%;
+        text-shadow: 5px 4px 4px rgb(89, 36, 235);
+    }
+    
+    .gameContainer .batman .batmanani {
+        animation: batman 2s linear 0s;
+    }
+    
+    @keyframes batman {
+        0% {
+            bottom: 20px;
+        }
+        40% {
+            bottom: 270px;
+        }
+        65% {
+            bottom: 230px;
+        }
+        80% {
+            bottom: 150px;
+        }
+        100% {
+            bottom: 20px;
+        }
+    }
+    /* .batright {
+        animation: right 1s linear
+    } */
+    /*     
+    @keyframes right {
+        0% {
+            bottom: 20px;
+        }
+        50% {
+            bottom: 100px;
+        }
+        100% {
+            bottom: 20px;
+        }
+    } */
+    
+    .jokerani {
+        animation: joker 4s linear infinite;
+    }
+    
+    @keyframes joker {
+        0% {
+            left: 100vw;
+        }
+        100% {
+            left: -10vw;
+        }
+    }
+    
+    .gameContainer #replay {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-60px);
+        height: 50px;
+        width: 120px;
+        color: white;
+        background-color: rgb(0, 255, 13);
+        border-style: groove;
+        border: 2;
+        border-radius: 20px;
+        visibility: hidden;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    
+    .gameContainer #replay:focus {
+        outline: none;
+        background-color: rgb(64, 248, 57);
+    }
