@@ -130,9 +130,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000)
 
         } else if (offsetX < 120 && cross) {
+
             score += 1;
             scored = document.querySelector('#score')
             scored.innerHTML = "Your Score: " + score
+
+
 
 
             // alert('crossed')
@@ -144,7 +147,11 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 aniDur = parseFloat(window.getComputedStyle(joker, null).getPropertyValue('animation-duration'));
                 // console.log(aniDur)
-                newDur = aniDur - 0.06;
+                if (aniDur > 2.44) {
+                    newDur = aniDur - 0.06;
+                    console.log(newDur)
+                } else(newDur = aniDur)
+
                 joker.style.animationDuration = newDur + 's';
                 // console.log('New animation duration: ', newDur)
             }, 300);
