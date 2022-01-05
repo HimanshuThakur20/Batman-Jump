@@ -59,6 +59,26 @@
         background-color: rgb(211, 50, 1);
     }
     
+    .pause {
+        display: block;
+        z-index: 10;
+        visibility: hidden;
+    }
+    
+    .pause button {
+        position: absolute;
+        top: 30%;
+        left: 45%;
+        transform: translateX(-50px);
+        height: 40px;
+        width: 200px;
+        color: white;
+        background-color: rgba(0, 110, 255, 0.829);
+        border-style: groove;
+        border: 2;
+        border-radius: 20px;
+    }
+    
     .batman {
         visibility: hidden;
     }
@@ -144,8 +164,28 @@
         text-shadow: 5px 4px 4px rgb(89, 36, 235);
     }
     
+    .info {
+        visibility: hidden;
+    }
+    
+    .info span {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+        float: right;
+        font-size: 14px;
+        font-weight: bolder;
+        font-family: monospace;
+        color: white;
+        left: -3%;
+        top: 5%;
+        text-shadow: 5px 4px 4px rgb(235, 36, 36);
+    }
+    
     .gameContainer .batman .batmanani {
         animation: batman 2s linear 0s;
+        animation-play-state: running;
     }
     
     @keyframes batman {
@@ -183,6 +223,7 @@
     
     .jokerani {
         animation: joker 4s linear infinite;
+        animation-play-state: running;
     }
     
     @keyframes joker {

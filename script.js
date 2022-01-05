@@ -20,10 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.joker').style.visibility = 'visible'
         document.querySelector('.play').style.visibility = 'hidden'
         document.querySelector('.score').style.visibility = 'visible'
-            // document.querySelector('.GameOver').style.visibility = 'visible'
+        document.querySelector('.info').style.visibility = 'visible'
+
+        // document.querySelector('.GameOver').style.visibility = 'visible'
         setTimeout(() => {
             document.querySelector('#joke').classList.add('jokerani');
         }, 300)
+
+
+
     })
 
 
@@ -55,6 +60,25 @@ document.addEventListener('DOMContentLoaded', function() {
             bat = document.querySelector('#batman');
             batX = parseInt(window.getComputedStyle(bat, null).getPropertyValue('left'));
             bat.style.left = (batX - 112) + "px";
+
+        }
+        if (e.keyCode == 27) { //esc for pause
+            console.log(document.querySelector('.pause').style.visibility)
+            document.querySelector('.pause').style.visibility = 'visible';
+            console.log(document.querySelector('.pause').style.visibility)
+            music.pause();
+            document.querySelector(".jokerani").style.animationPlayState = 'paused';
+            document.querySelector(".batmanani").style.animationPlayState = 'paused';
+
+
+        }
+        if (e.keyCode == 13) { //enter for play
+            setTimeout(() => {
+                document.querySelector('.pause').style.visibility = 'hidden';
+                music.play();
+                document.querySelector(".jokerani").style.animationPlayState = 'running';
+                document.querySelector(".batmanani").style.animationPlayState = 'running';
+            }, 500)
 
         }
     })
@@ -160,6 +184,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }, 10);
 
+    // document.addEventListener('keydown', function(e) {
+    //     if (e.keycode == 27) { //esc for pause
+    //         music.pause();
+    //         document.querySelector(".batmanani").style.animation - play - state = 'paused';
+    //         document.querySelector(".jokerani").style.animation - play - state = 'paused';
 
+    //     }
+    //     if (e.keycode == 18) { //alt for play
+    //         music.play();
+    //         document.querySelector(".batmanani").style.animation - play - state = 'running';
+    //         document.querySelector(".jokerani").style.animation - play - state = 'running';
+
+    //     }
+    // })
 
 })
